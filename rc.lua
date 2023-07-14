@@ -258,6 +258,14 @@ globalkeys = gears.table.join(
               {description = "show main menu", group = "awesome"}),
 
 
+	awful.key({ }, "XF86AudioRaiseVolume", function ()
+       awful.util.spawn("amixer set Master 9%+") end),
+	awful.key({ }, "XF86AudioLowerVolume", function ()
+       awful.util.spawn("amixer set Master 9%-") end),
+	awful.key({ }, "XF86AudioMute", function ()
+       awful.util.spawn("amixer sset Master toggle") end),    
+	      
+
 	-- Volume manipulation
 	awful.key({ }, "#122", function () awful.util.spawn("amixer -D pulse sset Master 5%-") end),
 	awful.key({ }, "#123", function () awful.util.spawn("amixer -D pulse sset Master 5%+") end),
