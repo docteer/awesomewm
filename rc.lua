@@ -275,6 +275,9 @@ awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
 			awful.util.spawn("amixer -q sset Master 5%+") end),
     awful.key({ }, "XF86AudioMute", function ()
 			awful.util.spawn("amixer -D pulse set Master 1+ toggle") end),
+    awful.key({ }, "XF86AudioMicMute", function ()
+			awful.util.spawn("amixer set Capture toggle") end),
+
 
     
  
