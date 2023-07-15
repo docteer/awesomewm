@@ -266,6 +266,13 @@ awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
         awful.util.spawn("xbacklight -dec 15") end),
     awful.key({ }, "XF86MonBrightnessUp", function ()
         awful.util.spawn("xbacklight -inc 15") end),
+
+    
+    -- Audio Controls
+	awful.key({ }, "XF86AudioLowerVolume", function ()
+			awful.util.spawn("amixer -q sset Master 5%-") end),
+    awful.key({ }, "XF86AudioRaiseVolume", function ()
+			awful.util.spawn("amixer -q sset Master 5%+") end),
  
 
 	    -- Layout manipulation
