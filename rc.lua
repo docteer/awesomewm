@@ -66,9 +66,9 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
 awful.layout.suit.tile,
+awful.layout.suit.tile.left,
 awful.layout.suit.fair,
 awful.layout.suit.floating,
-awful.layout.suit.tile.left,
 awful.layout.suit.tile.bottom,
 awful.layout.suit.tile.top,
 awful.layout.suit.fair.horizontal,
@@ -208,7 +208,7 @@ s.mywibox:setup {
 layout = wibox.layout.align.horizontal,
 { -- Left widgets
 	layout = wibox.layout.fixed.horizontal,
-	mylauncher,
+	-- mylauncher,
 	s.mytaglist,
 	s.mypromptbox,
 },
@@ -322,9 +322,9 @@ awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description = "increase the number of columns", group = "layout"}),
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    awful.key({ modkey, "Control" }, "Right", function () awful.layout.inc( 1)                end,
               {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Control" }, "Left", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
 
 --audio binds
