@@ -242,8 +242,8 @@ awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
+    -- awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
+       --        {description = "go back", group = "tag"}),
 
     awful.key({ modkey,           }, "k",
         function ()
@@ -277,6 +277,11 @@ awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
 			awful.util.spawn("amixer -D pulse set Master 1+ toggle") end),
     awful.key({ }, "XF86AudioMicMute", function ()
 			awful.util.spawn("amixer set Capture toggle") end),
+
+
+   -- Xlock Bind
+   awful.key({ modkey,  }, "Escape", function ()
+		   awful.util.spawn("xlock") end),
 
 
     
