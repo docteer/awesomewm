@@ -281,7 +281,7 @@ awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
 
    -- Xlock Bind
    awful.key({ modkey,  }, "Escape", function ()
-		   awful.util.spawn("xsecurelock") end),
+		   awful.util.spawn("slock") end),
 
 
     
